@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pdf teste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" /> -->
+
+</head>
+
+<body>
+    <div class="container">
+        <h1> Gerar PDF </h1>
+
+        <div id="inputsTag">
+            <label> Quantidade de tags: </label>
+            <input type="number" id="quant">
+            <br>
+            <button onclick="quantTag()"> Add quant tags </button>
+        </div>
+
+        <div id="tags">
+            <div class="row">
+                <table style="width:129%">
+                    <tr>
+                        <th> Título </th>
+                        <td> <input type="text" id="titulo" /> </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <th> Nome da Tag </th>
+                        <th> Valor </th>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <br>
+        <label> Informe o texto: </label>
+        <br>
+        <textarea autocomplete="on" name="textArea1" rows="4" cols="50" id="textArea"> </textarea>
+
+        <br>
+        <button id="baixar" onclick="gerarPdf()"> Download </button>
+        <a href="listadeRelatorios.html"><button> Listar </button> </a>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script src="src/fare.js"></script>
+    <script src="src/js.js"></script>
+    <script src="src/jspdf.min.js"></script>
+
+    <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+
+</body>
+
+</html>

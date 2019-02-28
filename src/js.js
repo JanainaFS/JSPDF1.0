@@ -1,6 +1,6 @@
 var nomesTag = [], valoresTag = [];
 var quantidade, editor, textHTML, title;
-var lMargin = 10, RMargin = 2;
+var lMargin = 15, RMargin = 4;
 
 function quantTag() {
     var quantTag = document.getElementById('quant').value;

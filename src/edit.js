@@ -27,7 +27,6 @@ dados.on("value", function(snapshot){
     }
     
     titulo.value = childData.titulo;
-    $('cke_editable').append(childData.texto)
     CKEDITOR.instances['textArea'].setData(childData.texto)
     
 });

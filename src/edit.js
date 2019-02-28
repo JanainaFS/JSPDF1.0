@@ -1,5 +1,5 @@
 var titulo = document.getElementById('titulo');
-var text = document.getElementById('textArea')
+//var text = document.getElementById('textArea')
 
 var query = location.search.slice(1);
 var partes = query.split('&');
@@ -27,8 +27,8 @@ dados.on("value", function(snapshot){
     }
     
     titulo.value = childData.titulo;
-    text.textContent = childData.texto;
-    console.log(text);
+    $('cke_editable').append(childData.texto)
+    CKEDITOR.instances['textArea'].setData(childData.texto)
     
 });
 

@@ -45,6 +45,8 @@ function gerarPdf() {
 
     textHTML = CKEDITOR.instances.textArea.getData();
 
+    create(nomesTag, valoresTag, textHTML, title);
+
     for (var i = 0; i < nomesTag.length; i++) {
         while (textHTML.includes(nomesTag[i])) {
             textHTML = textHTML.replace(nomesTag[i], valoresTag[i]);
@@ -56,8 +58,7 @@ function gerarPdf() {
     
     doc.fromHTML(textHTML, lMargin, RMargin, { 'width': 190 });
     doc.save('documento.pdf');
-
-    create(nomesTag, valoresTag, textHTML, title);
+    
 }   
 
 function create(nomesTag, valoresTag, textHTML, title){
